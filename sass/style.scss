@@ -1,0 +1,316 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat';
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	color: #3b3b3b;
+}
+
+body p,
+li {
+	color: #1d1a1a;
+}
+
+// MAIN CONTAINER
+
+.main-container {
+	flex: 1;
+	display: flex;
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+// LEFT AND RIGHT CONTAINER
+
+.container-left-side {
+	display: flex;
+	flex-direction: column;
+	background-color: #bcbd8b;
+	height: 100vh;
+	width: 30%;
+	min-width: 250px;
+	border: 2px solid #9c9990;
+}
+
+.container-right-side {
+	display: flex;
+	flex-direction: column;
+	background-color: #eff1ed;
+	height: 100vh;
+	width: 70%;
+}
+
+.photo {
+	width: 180px;
+	height: 180px;
+	margin: 16px auto 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// LEFT SIDE INFORMATION
+
+.personal-data-container,
+.education-container,
+.skills-container {
+	border: 2px solid #9c9990;
+	margin: 32px;
+	border-radius: 24px;
+	flex: 1;
+}
+
+.personal-data-container h3,
+.education-container h3,
+.skills-container h3 {
+	text-transform: uppercase;
+	margin: 12px;
+	padding: 8px;
+}
+.personal-data-paragraphs span,
+.education-paragraph span {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.personal-data-paragraphs,
+.education-paragraph {
+	margin: 12px;
+	padding: 8px;
+}
+
+.personal-data-paragraphs p,
+.education-paragraph p {
+	font-size: 17px;
+	margin-bottom: 12px;
+	letter-spacing: 1px;
+	word-wrap: break-word;
+}
+
+#skills-list {
+	list-style-type: none;
+	margin: 12px;
+	padding: 8px;
+	letter-spacing: 1px;
+}
+
+#skills-list li {
+	margin-bottom: 12px;
+}
+
+// TOP BREAK
+
+.top-break {
+	background-color: #bcbd8b;
+	flex-direction: column;
+	height: 236px;
+	width: 100%;
+	border-bottom-left-radius: 236px;
+	border: 2px solid #9c9990;
+}
+
+.top-break h1 {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 90px auto;
+	font-size: 42px;
+}
+
+// RIGHT SAIDE INFORMATION
+
+.about-me-section,
+.job-exp-section,
+.hobby-section {
+	padding: 18px;
+}
+
+.about-me-section h1,
+.job-exp-section h1,
+.hobby-section h1 {
+	margin: 20px;
+	padding: 20px;
+	font-size: 36px;
+}
+
+.about-me-section p,
+.job-exp-section p {
+	margin: 20px;
+	padding: 20px;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+#hobby-list li {
+	list-style-type: none;
+	margin-left: 20px;
+	padding: 18px;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+// FONT AWESOME ICON
+
+.font-awesome-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+.font-awesome-icon a {
+	text-decoration: none;
+	color: #333;
+}
+
+.decoration-border {
+	border-top: 1px solid #9c9990;
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1200px) {
+	.top-break {
+		height: 200px;
+	}
+	.top-break h1 {
+		font-size: 32px;
+		margin: 60px auto;
+	}
+	.container-left-side,
+	.container-right-side {
+		height: auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.top-break {
+		height: 200px;
+	}
+	.top-break h1 {
+		font-size: 32px;
+		margin: 60px auto;
+	}
+	.container-left-side,
+	.container-right-side {
+		height: auto;
+	}
+}
+
+@media (max-width: 892px) {
+	.main-container {
+		flex-wrap: nowrap;
+	}
+
+	.container-left-side,
+	.container-right-side {
+		height: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.container-left-side,
+	.container-right-side {
+		height: auto;
+	}
+	.photo {
+		width: 140px;
+		height: 140px;
+	}
+	.about-me-section h1,
+	.job-exp-section h1,
+	.hobby-section h1 {
+		font-size: 28px;
+		margin: 10px;
+		padding: 10px;
+	}
+	.about-me-section p,
+	.job-exp-section p {
+		font-size: 18px;
+		margin: 10px;
+		padding: 10px;
+	}
+	#hobby-list li {
+		font-size: 18px;
+		padding: 10px;
+	}
+	.font-awesome-icon {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 600px) {
+	.main-container {
+		flex-wrap: wrap;
+	}
+	.container-left-side {
+		width: 100%;
+		height: auto;
+		min-width: 100%;
+		min-height: auto;
+	}
+	.container-right-side {
+		width: 100%;
+		min-width: 100%;
+		height: auto;
+		min-height: auto;
+	}
+	.top-break {
+		height: auto;
+		border-bottom-left-radius: 0;
+		border: none;
+	}
+	.top-break h1 {
+		font-size: 28px;
+		margin: 40px auto;
+	}
+	.photo {
+		width: 160px;
+		height: 160px;
+	}
+}
+
+@media (max-width: 480px) {
+	.top-break h1 {
+		font-size: 24px;
+		margin: 40px auto;
+	}
+	.photo {
+		width: 120px;
+		height: 120px;
+	}
+	.about-me-section h1,
+	.job-exp-section h1,
+	.hobby-section h1 {
+		font-size: 24px;
+	}
+	.about-me-section p,
+	.job-exp-section p {
+		font-size: 16px;
+	}
+	#hobby-list li {
+		font-size: 16px;
+		margin: 10px;
+	}
+
+	.font-awesome-icon {
+		font-size: 24px;
+	}
+}
